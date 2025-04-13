@@ -15,6 +15,13 @@ export interface Post {
   excerpt: string;
   author: User;
   coverImage?: string;
+  /**
+   * YouTube video URL in one of these formats:
+   * - YouTube embed URL: https://www.youtube.com/embed/VIDEO_ID
+   * - YouTube watch URL: https://www.youtube.com/watch?v=VIDEO_ID
+   * - YouTube short URL: https://youtu.be/VIDEO_ID
+   * The application will automatically convert watch and short URLs to embed format.
+   */
   videoUrl?: string;
   tags: string[];
   createdAt: Date;

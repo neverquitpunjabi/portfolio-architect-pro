@@ -242,14 +242,17 @@ const BlogPostForm = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="videoUrl">Video Embed URL (YouTube, Vimeo, etc.)</Label>
+                <Label htmlFor="videoUrl">YouTube Video URL</Label>
                 <Input
                   id="videoUrl"
                   name="videoUrl"
                   value={formData.videoUrl}
                   onChange={handleChange}
-                  placeholder="https://www.youtube.com/embed/video-id"
+                  placeholder="https://www.youtube.com/watch?v=video-id or https://youtu.be/video-id"
                 />
+                <p className="text-xs text-slate-400">
+                  Supported formats: YouTube watch URLs (youtube.com/watch?v=VIDEO_ID) or short URLs (youtu.be/VIDEO_ID)
+                </p>
               </div>
               
               <div className="space-y-2">

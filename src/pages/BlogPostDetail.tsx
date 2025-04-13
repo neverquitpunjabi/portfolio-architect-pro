@@ -38,6 +38,30 @@ const BlogPostDetail = () => {
     }
   };
 
+  // Process video URL to ensure proper embedding format
+  const getEmbedUrl = (url: string | undefined) => {
+    if (!url) return '';
+    
+    // Check if it's already an embed URL
+    if (url.includes('youtube.com/embed/')) {
+      return url;
+    }
+    
+    // Convert youtube.com or youtu.be URLs to embed format
+    if (url.includes('youtube.com/watch')) {
+      const videoId = new URLSearchParams(url.split('?')[1]).get('v');
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    }
+    
+    if (url.includes('youtu.be/')) {
+      const videoId = url.split('youtu.be/')[1].split('?')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    
+    // For other services or if already in proper embed format, return as is
+    return url;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white">
       {/* Header */}
@@ -130,7 +154,7 @@ const BlogPostDetail = () => {
             <div className="aspect-video w-full">
               <iframe 
                 className="w-full h-full rounded-lg"
-                src={post.videoUrl} 
+                src={getEmbedUrl(post.videoUrl)} 
                 title="Embedded video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
