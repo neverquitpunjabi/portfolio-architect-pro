@@ -60,7 +60,10 @@ const SkillsSection = () => {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-sm text-slate-400">{skill.level}%</span>
                     </div>
-                    <Progress value={skill.level} className="h-2 bg-slate-700" indicatorClassName="bg-purple-500" />
+                    <Progress 
+                      value={skill.level} 
+                      className="h-2 bg-slate-700 [&>div]:bg-purple-500" 
+                    />
                   </div>
                 ))}
               </div>
