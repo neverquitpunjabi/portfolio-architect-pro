@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
 
-## Project info
+# Dev Portfolio
 
-**URL**: https://lovable.dev/projects/3bf03a3f-0f18-4b29-9f15-f0d74c99649f
+A modern portfolio website for developers showcasing projects, skills and contact information. This project simulates a PHP/MySQL backend while actually using React for demonstration purposes.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Responsive design for all screen sizes
+- Projects showcase with live demo and GitHub links
+- Skills section with progress indicators
+- Working contact form
+- Animated UI components
+- Clean and modern design with purple accents
 
-**Use Lovable**
+## Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3bf03a3f-0f18-4b29-9f15-f0d74c99649f) and start prompting.
+In a real implementation, this would be powered by:
 
-Changes made via Lovable will be committed automatically to this repo.
+- PHP for server-side processing
+- MySQL for database storage
+- JavaScript for client-side interactivity
+- HTML/CSS for structure and styling
 
-**Use your preferred IDE**
+For this demo project, we're using:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## How to Customize
 
-Follow these steps:
+1. Update the personal information in `Hero.tsx`
+2. Add your own projects in `ProjectsSection.tsx`
+3. Update skills in `SkillsSection.tsx`
+4. Modify contact information in `ContactForm.tsx` and `Footer.tsx`
+5. Add your own images and brand colors
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Installation and Setup
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone the repository
+git clone <repository-url>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Navigate to the project directory
+cd portfolio
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project can be deployed on any static site hosting service or PHP hosting environment.
 
-**Use GitHub Codespaces**
+## License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3bf03a3f-0f18-4b29-9f15-f0d74c99649f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT
