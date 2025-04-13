@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import { Link } from 'react-router-dom';
 
 // Components
 import Header from '../components/Header';
@@ -55,6 +56,24 @@ const Index = () => {
       <ProjectsSection />
       <SkillsSection />
       <ContactForm onSubmit={handleContactSubmit} />
+      
+      {/* New Blog CTA Section */}
+      <section className="py-16 bg-slate-900/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Check Out My Blog</h2>
+            <p className="text-slate-300 mb-6">
+              Read articles about web development, design trends, and programming tips.
+            </p>
+            <Link to="/blog">
+              <Button size="lg" className="animate-pulse">
+                Visit The Blog
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
       <Footer />
     </div>
   );
